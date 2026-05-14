@@ -1,0 +1,30 @@
+{
+  "todos": [
+    {
+      "title": "fjeiof",
+      "done": true,
+      "id": "jGfokFn-DwE"
+    },
+    {
+      "title": "anothing work",
+      "done": true,
+      "id": "kq-Ty-g5JKE"
+    },
+    {
+      "title": "sleeping",
+      "done": false,
+      "id": "utrghDyS5JA"
+    },
+    {
+      "title": "egrg",
+      "done": false,
+      "id": "ErmdSlpwQM0"
+    },
+    {
+      "title": "jij",
+      "done": false,
+      "id": "zj4Ih-_2AyI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
