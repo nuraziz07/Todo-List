@@ -5,7 +5,7 @@ import '../src/index.css'
 import App from '../src/App.tsx'
 import TodoProvider from "./Providers/context.tsx";
 import {BrowserRouter} from 'react-router-dom'
-import './i18n.ts'
+import './i18n/i18n.ts'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
