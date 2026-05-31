@@ -1,9 +1,10 @@
 import  {type FormEvent, useRef} from 'react';
-import {t} from "i18next";
 import {useCreateTodo} from "../Services/mutations.ts";
+import {useTranslation} from "react-i18next";
 
 const CreateTodo = () => {
 
+    const {t} = useTranslation()
     const createTodoMutation = useCreateTodo();
     const inputRef = useRef<HTMLInputElement>(null)
 
