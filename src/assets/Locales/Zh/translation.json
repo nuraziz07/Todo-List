@@ -1,0 +1,21 @@
+{
+  "Eyebrow": "我的工作区",
+  "Title": "任务管理器",
+  "Placeholder": "添加新任务...",
+  "AddBtn": "添加",
+  "StatActive": "进行中",
+  "StatDone": "已完成",
+  "Clear": "清除已完成",
+  "FilterAll": "全部",
+  "FilterActive": "进行中",
+  "FilterCompleted": "已完成",
+  "Empty": "暂无任务",
+  "TaskCountAll": "个任务",
+  "TaskCountActive": "进行中",
+  "TaskCountCompleted": "已完成",
+  "Loading": "加载任务中...",
+  "Error": "加载任务失败",
+  "EmptyAll": "这里什么都没有 — 请在上方添加任务",
+  "EmptyActive": "这里什么都没有 — 请在上方添加任务",
+  "EmptyCompleted": "暂无已完成的任务"
+}

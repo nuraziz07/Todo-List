@@ -1,0 +1,21 @@
+{
+  "Eyebrow": "My Workspace",
+  "Title": "Task Manager",
+  "Placeholder": "Add a new task...",
+  "AddBtn": "Add Task",
+  "StatActive": "active",
+  "StatDone": "done",
+  "Clear": "Clear completed",
+  "FilterAll": "All",
+  "FilterActive": "Active",
+  "FilterCompleted": "Completed",
+  "Empty": "No tasks yet",
+  "TaskCountAll": "tasks",
+  "TaskCountActive": "active",
+  "TaskCountCompleted": "done",
+  "Loading": "Loading tasks...",
+  "Error": "Failed to load tasks",
+  "EmptyAll": "Nothing here — add a task above",
+  "EmptyActive": "Nothing here — add a task above",
+  "EmptyCompleted": "No completed tasks yet"
+}

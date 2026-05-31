@@ -1,0 +1,21 @@
+{
+  "Eyebrow": "Mon espace de travail",
+  "Title": "Gestionnaire de tâches",
+  "Placeholder": "Ajouter une nouvelle tâche...",
+  "AddBtn": "Ajouter",
+  "StatActive": "actives",
+  "StatDone": "terminées",
+  "Clear": "Effacer les terminées",
+  "FilterAll": "Tout",
+  "FilterActive": "Actives",
+  "FilterCompleted": "Terminées",
+  "Empty": "Aucune tâche pour l'instant",
+  "TaskCountAll": "tâches",
+  "TaskCountActive": "actives",
+  "TaskCountCompleted": "terminées",
+  "Loading": "Chargement des tâches...",
+  "Error": "Échec du chargement des tâches",
+  "EmptyAll": "Rien ici — ajoutez une tâche ci-dessus",
+  "EmptyActive": "Rien ici — ajoutez une tâche ci-dessus",
+  "EmptyCompleted": "Aucune tâche terminée pour l'instant"
+}

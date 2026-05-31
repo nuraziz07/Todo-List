@@ -1,0 +1,21 @@
+{
+  "Eyebrow": "Моё пространство",
+  "Title": "Задачи",
+  "Placeholder": "Добавить задачу...",
+  "AddBtn": "Добавить",
+  "StatActive": "активных",
+  "StatDone": "выполнено",
+  "Clear": "Очистить выполненные",
+  "FilterAll": "Все",
+  "FilterActive": "Активные",
+  "FilterCompleted": "Выполненные",
+  "Empty": "Задач пока нет",
+  "TaskCountAll": "задачи",
+  "TaskCountActive": "активных",
+  "TaskCountCompleted": "выполнено",
+  "Loading": "Загрузка задач...",
+  "Error": "Не удалось загрузить задачи",
+  "EmptyAll": "Пусто — добавьте задачу выше",
+  "EmptyActive": "Пусто — добавьте задачу выше",
+  "EmptyCompleted": "Выполненных задач пока нет"
+}

@@ -1,0 +1,21 @@
+{
+  "Eyebrow": "Ish maydonim",
+  "Title": "Vazifalar",
+  "Placeholder": "Vazifa qo'shing...",
+  "AddBtn": "Qo'shish",
+  "StatActive": "faol",
+  "StatDone": "bajarildi",
+  "Clear": "Bajarilganlarni tozalash",
+  "FilterAll": "Barchasi",
+  "FilterActive": "Faol",
+  "FilterCompleted": "Bajarildi",
+  "Empty": "Hozircha vazifalar yo'q",
+  "TaskCountAll": "ta vazifa",
+  "TaskCountActive": "ta faol",
+  "TaskCountCompleted": "ta bajarildi",
+  "Loading": "Vazifalar yuklanmoqda...",
+  "Error": "Vazifalarni yuklashda xatolik",
+  "EmptyAll": "Hozircha bo'sh — yuqorida vazifa qo'shing",
+  "EmptyActive": "Hozircha bo'sh — yuqorida vazifa qo'shing",
+  "EmptyCompleted": "Bajarilgan vazifalar yo'q"
+}

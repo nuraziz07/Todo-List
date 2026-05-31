@@ -1,0 +1,21 @@
+{
+  "Eyebrow": "Mi espacio de trabajo",
+  "Title": "Gestor de tareas",
+  "Placeholder": "Añadir una nueva tarea...",
+  "AddBtn": "Añadir",
+  "StatActive": "activas",
+  "StatDone": "completadas",
+  "Clear": "Limpiar completadas",
+  "FilterAll": "Todo",
+  "FilterActive": "Activas",
+  "FilterCompleted": "Completadas",
+  "Empty": "No hay tareas aún",
+  "TaskCountAll": "tareas",
+  "TaskCountActive": "activas",
+  "TaskCountCompleted": "completadas",
+  "Loading": "Cargando tareas...",
+  "Error": "Error al cargar las tareas",
+  "EmptyAll": "Nada aquí — añade una tarea arriba",
+  "EmptyActive": "Nada aquí — añade una tarea arriba",
+  "EmptyCompleted": "No hay tareas completadas aún"
+}

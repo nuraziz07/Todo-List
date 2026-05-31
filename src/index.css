@@ -1,0 +1,229 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/inter";
+
+@custom-variant dark (&:is(.dark *));
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /*background-image: radial-gradient(ellipse at 80% 10%, rgba(234, 179, 8, 0.12) 0%, transparent 50%),*/
+    /*radial-gradient(ellipse at 10% 90%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);*/
+    background-attachment: fixed;
+}
+
+@keyframes taskSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes taskSlideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(20px) scale(0.97);
+    }
+}
+
+.task-enter {
+    animation: taskSlideIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.task-exit {
+    animation: taskSlideOut 0.2s ease-in forwards;
+}
+
+@theme {
+    --color-primary: #eab308;
+    --color-background: #0d0d0f;
+    --color-bg-radial: radial-gradient(
+            ellipse at 80% 10%, rgba(234,179,8,0.12) 0%, transparent 50%
+    ), radial-gradient(
+            ellipse at 10% 90%, rgba(168,85,247,0.08) 0%, transparent 50%
+    );
+    --color-card: #111113;
+    --color-card-linear:linear-gradient(90deg,transparent,rgba(234,179,8,0.5),transparent);
+    --color-card-radial: radial-gradient(circle,rgba(234,179,8,0.12) 10%,transparent 70%);
+    --color-card-border: rgba(255, 255, 255, 0.07);
+    --color-workspace: #eab308;
+    --color-title: #f5f5f0;
+    --color-input-bg: rgba(255, 255, 255, 0.04);
+    --color-input-text: white;
+    --color-input-border: rgba(255, 255, 255, 0.09);
+    --color-input-placeholder: rgba(255, 255, 255, 0.2);
+    --color-input-border-focus: rgba(234, 179, 8, 0.4);
+    --color-input-shadow-focus: rgba(234, 179, 8, 0.06);
+    --color-add-button-shadow: rgba(234, 179, 8, 0.25);
+    --color-add-button-text: #000;
+    --color-add-button-bg-hover: #fbbf24;
+    --color-add-button-shadow-hover: rgba(234, 179, 8, 0.35);
+    --color-task-label: rgba(255, 255, 255, 0.2);
+    --color-task-item-bg: rgba(255, 255, 255, 0.03);
+    --color-task-item-bg-hover: rgba(255, 255, 255, 0.05);
+    --color-task-item-border: rgba(255, 255, 255, 0.06);
+    --color-task-item-border-hover: rgba(255, 255, 255, 0.1);
+    --color-task-item-completed-bg: rgba(234, 179, 8, 0.03);
+    --color-task-item-completed-border: rgba(234, 179, 8, 0.1);
+    /*--color-checkbox-checked-bg: primary*/
+    /*--color-checkbox-checked-border: primary*/
+    --color-task-item-text: rgba(255, 255, 255, 0.85);
+    --color-task-item-completed-decoration: rgba(234, 179, 8, 0.4);
+    --color-task-item-completed-text: rgba(255, 255, 255, 0.3);
+    --color-icon-text: rgba(255, 255, 255, 0.3);
+    --color-icon-edit-bg-hover: rgba(234, 179, 8, 0.12);
+    --color-icon-edit-text-hover: #eab308;
+    --color-icon-delete-bg-hover: rgba(239, 68, 68, 0.15);
+    --color-icon-delete-text-hover: #ef4444;
+    --color-icon-check-text-hover: #22c55e;
+    --color-icon-check-bg-hover: rgba(34, 197, 94, 0.15);
+    --color-task-empty: rgba(255, 255, 255, 0.15);
+    --color-stats: rgba(255, 255, 255, 0.3);
+    --color-stats-span: #eab308;
+    --color-button-tab-group-bg: rgba(255, 255, 255, 0.04);
+    --color-button-tab-group-border: rgba(255, 255, 255, 0.06);
+    --color-button-filter-active-bg: rgba(234, 179, 8, 0.15);
+    --color-button-filter-active-text: #eab308;
+    --color-button-filter-inactive-text: rgba(255, 255, 255, 0.65);
+    --color-buttom-filter-inactive-hover: rgba(255,255,255,0.65);
+    --color-button-filter-text: rgba(255, 255, 255, 0.35);
+    --color-clear-text: rgba(239, 68, 68, 0.4);
+    --color-clear-text-hover: rgba(239, 68, 68, 0.8);
+    --color-toggle-bg: #1a1a1f;
+    --color-toggle-border: rgba(255,255,255,0.1);
+    --color-toggle-active-bg: rgba(234, 179, 8, 0.15);
+    --color-toggle-icon: #eab308;
+    --color-toggle-icon-inactive: rgba(255,255,255,0.2)
+}
+
+.light {
+    --color-primary: #2563eb;
+    --color-background: #e8f0fe;
+    --color-bg-radial: radial-gradient(
+            ellipse at 80% 10%, rgb(119 94 16 / 0.12) 10%, transparent 50%
+    ), radial-gradient(
+            ellipse at 10% 90%, rgba(168,85,247,0.08) 10%, transparent 50%
+    );
+    --color-card: #ffffff;
+    --color-card-linear:linear-gradient(90deg,transparent,rgba(59,130,246,0.6),transparent);
+    --color-card-radial: radial-gradient(circle,rgba(59,130,246,0.12) 20%,transparent 70%);
+    --color-card-border: rgba(59,130,246,0.15);
+    --color-workspace: #3b82f6;
+    --color-title: #0f172a;
+    --color-input-bg: #f0f6ff;
+    --color-input-text: #2563eb;
+    --color-input-border: rgba(59,130,246,0.2);
+    --color-input-placeholder: #93c5fd;
+    --color-input-border-focus: rgba(37,99,235,0.5);
+    --color-input-shadow-focus: rgba(37,99,235,0.08);
+    --color-add-button-shadow: rgba(37,99,235,0.3);
+    --color-add-button-text: #fff;
+    --color-add-button-bg-hover: #1d4ed8;
+    --color-add-button-shadow-hover: rgba(37,99,235,0.35);
+    --color-task-label: rgba(0,0,0,0.2);
+    --color-task-item-bg: #f8fbff;
+    --color-task-item-bg-hover: #f0f6ff;
+    --color-task-item-border: rgba(59,130,246,0.1);
+    --color-task-item-border-hover: rgba(59,130,246,0.2);
+    --color-task-item-completed-bg: #eff6ff;
+    --color-task-item-completed-border: rgba(59,130,246,0.25);
+    /*--color-checkbox-checked-bg: primary*/
+    /*--color-checkbox-checked-border: primary*/
+    --color-task-item-text: #1e293b;
+    --color-task-item-completed-decoration: rgba(59,130,246,0.4);
+    --color-task-item-completed-text: rgba(0,0,0,0.28);
+    --color-icon-text: rgba(0,0,0,0.2);
+    --color-icon-edit-bg-hover: rgba(234, 179, 8, 0.12);
+    --color-icon-edit-text-hover: #eab308;
+    --color-icon-delete-bg-hover: rgba(239, 68, 68, 0.15);
+    --color-icon-delete-text-hover: #ef4444;
+    --color-icon-check-text-hover: #22c55e;
+    --color-icon-check-bg-hover: rgba(34, 197, 94, 0.15);
+    --color-task-empty: rgba(0,0,0,0.2);
+    --color-stats: rgba(0,0,0,0.35);
+    --color-stats-span: #2563eb;
+    --color-button-tab-group-bg: rgba(59,130,246,0.05);
+    --color-button-tab-group-border: rgba(59,130,246,0.12);
+    --color-button-filter-active-bg: #e0e8f6;
+    --color-button-filter-active-text: #eab308;
+    --color-button-filter-inactive-text: rgba(255, 255, 255, 0.65);
+    --color-button-filter-text: rgba(37,99,235,0.45);
+    --color-buttom-filter-inactive-hover: #2563eb;
+    --color-clear-text: rgba(37,99,235,0.45);
+    --color-clear-text-hover: rgba(37,99,235,0.85);
+    --color-toggle-bg: #e0e9fb;
+    --color-toggle-border: rgba(37,99,235,0.15);
+    --color-toggle-active-bg: #f0f6ff;
+    --color-toggle-icon: #2563eb;
+    --color-toggle-icon-inactive: rgba(37,99,235,0.25)
+}
+
+@layer base {
+    body {
+        /*@apply bg-background text-foreground;*/
+    }
+
+    html {
+        @apply font-sans;
+    }
+}
+
+
+/*--color-primary: #eab308;*/
+/*--color-background: #0d0d0f;*/
+/*--color-card: #111113;*/
+/*--color-card-border: rgba(255, 255, 255, 0.07);*/
+/*--color-workspace: eab308;*/
+/*--color-title: #f5f5f0;*/
+/*--color-input-bg: rgba(255,255,255,0.04);*/
+/*--color-input-border: rgba(255,255,255,0.09);*/
+/*--color-input-placeholder: rgba(255,255,255,0.2);*/
+/*--color-input-border-focus: rgba(234,179,8,0.4);*/
+/*--color-input-shadow-focus: rgba(234,179,8,0.06);*/
+/*--color-add-button-shadow: rgba(234,179,8,0.25);*/
+/*--color-add-button-text: #000;*/
+/*--color-add-button-bg-hover: #fbbf24;*/
+/*--color-add-button-shadow-hover: rgba(234,179,8,0.35);*/
+/*--color-task-label: rgba(255,255,255,0.2);*/
+/*--color-task-item-bg: rgba(255,255,255,0.03);*/
+/*--color-task-item-bg-hover: rgba(255,255,255,0.05);*/
+/*--color-task-item-border: rgba(255,255,255,0.06);*/
+/*--color-task-item-border-hover: rgba(255,255,255,0.1);*/
+/*--color-task-item-completed-bg: rgba(234,179,8,0.03);*/
+/*--color-task-item-completed-border: rgba(234,179,8,0.1);*/
+/*!*--color-checkbox-checked-bg: primary*!*/
+/*!*--color-checkbox-checked-border: primary*!*/
+/*--color-task-item-text: rgba(255,255,255,0.85);*/
+/*--color-task-item-completed-decoration:  rgba(234,179,8,0.4);*/
+/*--color-task-item-completed-text: rgba(255,255,255,0.3);*/
+/*--color-icon-text: rgba(255,255,255,0.3);*/
+/*--color-icon-edit-bg-hover: rgba(234,179,8,0.12);*/
+/*--color-icon-edit-text-hover: #eab308;*/
+/*--color-icon-delete-bg-hover: rgba(239,68,68,0.15);*/
+/*--color-icon-delete-text-hover: #ef4444;*/
+/*--color-icon-check-text-hover: #22c55e;*/
+/*--color-icon-check-bg-hover: rgba(34, 197, 94, 0.15);*/
+/*--color-task-empty: rgba(255,255,255,0.15);*/
+/*--color-stats: rgba(255,255,255,0.3);*/
+/*--color-stats-span: #eab308;*/
+/*--color-button-tab-group-bg: rgba(255,255,255,0.04);*/
+/*--color-button-tab-group-border: rgba(255,255,255,0.06);*/
+/*--color-button-filter-active-bg: rgba(234,179,8,0.15);*/
+/*--color-button-filter-active-text: #eab308;*/
+/*--color-button-filter-inactive-text: rgba(255,255,255,0.65);*/
+/*--color-button-filter-text: rgba(255,255,255,0.35);*/
+/*--color-clear-text: rgba(239,68,68,0.4);*/
+/*--color-clear-text-hover: rgba(239,68,68,0.8)*/

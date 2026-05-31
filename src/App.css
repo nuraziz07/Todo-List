@@ -1,0 +1,45 @@
+@keyframes taskSlideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px) scale(0.97);
+  }
+}
+
+.task-enter {
+  animation: taskSlideIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.task-exit {
+  animation: taskSlideOut 0.2s ease-in forwards;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position:  400px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+          90deg,
+          rgba(255,255,255,0.04) 25%,
+          rgba(255,255,255,0.09) 50%,
+          rgba(255,255,255,0.04) 75%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.4s infinite linear;
+  border-radius: 6px;
+}
+@keyframes spin  {
+  0% {
+    transform: rotate(0deg);
+  } 100% {
+  transform: rotate(360deg);
+      }
+}
+.spin {
+  animation: spin 1s linear infinite;
+}
