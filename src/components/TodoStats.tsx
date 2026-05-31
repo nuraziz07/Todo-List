@@ -1,11 +1,12 @@
-import {t} from "i18next";
 import {useTodoQuery} from "../Services/queries.ts";
 import type {ITodo} from "../Types/ITodo.ts";
 import {useDeleteTodo} from "../Services/mutations.ts";
+import {useTranslation} from "react-i18next";
+
 
 const TodoStats = () => {
     const {data} = useTodoQuery();
-
+    const {t} = useTranslation()
     const completed = data?.filter(({done}: ITodo): boolean => done === true)
     const uncompleted = data?.filter(({done}: ITodo): boolean => done === false)
 
